@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/styles/stylesHome.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+</head>
+
+<body>
+
+    <header>
+        {% include './shared/menu.html' %}
+    </header>
+
+    <main>
+        <section>
+            <div class="banner">
+                <img src="../static/img/elherbario_logo.svg" alt="Logo">
+            </div>
+        </section>
+        <section>
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-6 text-center">
+                        <img src="../static/img/plato.png" alt="Plato" class="img-fluid w-100">
+                        <h1>El herbario de la huerta</h1>
+                        <p class="wow animate__animated animate__fadeInUp animate__slow">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero esse autem, eos libero odio doloribus veritatis quia ab cum, fugiat beatae odit. Esse sequi voluptates possimus consequuntur minima voluptatibus voluptatum!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container-fluid g-0">
+                <div class="row">
+                    <div class="col-12 col-md-6 align-self-center p-0">
+                        <img src="../static/img/huerta.jpeg" alt="Huerta" class="img-fluid w-100">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="row">
+                            <div class="col-12 col-md-6 text-center p-0">
+                                <img src="../static/img/vegetal_1.jpg" alt="Vegetal 1" class="img-fluid w-100">
+                                <h2 class="fw-bold">CATERING</h2>
+                                <p class="wow animate__animated animate__fadeInUp animate__slow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel est nisi ut, iure enim quaerat velit dolorum aspernatur cupiditate qui maiores temporibus molestiae placeat nam laboriosam assumenda accusamus ullam. Earum.</p>
+                            </div>
+                            <div class="col-12 col-md-6 text-center p-0">
+                                <img src="../static/img/vegetal_2.jpg" alt="Vegetal 2" class="img-fluid w-100">
+                                <h2 class="fw-bold">SERVICO SOCIALES</h2>
+                                <p class="wow animate__animated animate__fadeInUp animate__slow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel est nisi ut, iure enim quaerat velit dolorum aspernatur cupiditate qui maiores temporibus molestiae placeat nam laboriosam assumenda accusamus ullam. Earum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container menu">
+                <div class="row justify-content-center p-5">
+                    <div class="col-12 mb-3">
+                        <h2 class="text-center text-white">Nuestros platos</h2>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <img src="../static/img/plato1.jpg" alt="Platos" class="img-fluid w-100 wow animate__animated animate__fadeInLeft animate__slow zoom">
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <img src="../static/img/plato2.jpg" alt="Platos" class="img-fluid w-100 zoom">
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <img src="../static/img/plato3.jpg" alt="Platos" class="img-fluid w-100 wow animate__animated animate__fadeInRight animate__slow zoom">
+                    </div>
+                    <div class="col-12 text-center mt-4">
+                        <a href="" class="btn btn-outline-light">Ver Menú</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <script src="../static/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+
+</html>
