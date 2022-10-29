@@ -31,3 +31,7 @@
 .zoom:hover {
     transform: scale(1.1);
 }
+
+.bg-footer {
+    background-color: #21232A;
+}

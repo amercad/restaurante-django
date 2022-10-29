@@ -1,0 +1,10 @@
+# Paso de instalacion de los modules
+ 
+- python -m venv modules
+- cd modules
+- cd Scripts
+- activate
+
+- raiz ==> pip freeze
+- pip install -r package.txt
+
