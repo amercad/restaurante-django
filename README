@@ -2,9 +2,12 @@
  
 - python -m venv modules
 - cd modules
-- cd Scripts
+- cd Scripts -- modo escucha
 - activate
 
 - raiz ==> pip freeze
 - pip install -r package.txt
+
+- pip install pymysql
+- pip install 
 

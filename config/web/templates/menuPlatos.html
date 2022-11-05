@@ -29,13 +29,19 @@
                 </div>
                 <div class="col-12 col-md-7">
                     <h2>Registro de platos</h2>
-                    <form>
+                    <form method="POST">
                         {{ formulario }}
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-outline-success w-100">Enviar</button>
                     </form>
                 </div>
             </div>
         </div>
     </main>
+
+    <footer class="container-fluid mt-5 g-0">
+        {% include './shared/footer.html' %}
+    </footer>
 
 </body>
 </html>
