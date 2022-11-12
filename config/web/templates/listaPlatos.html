@@ -23,44 +23,24 @@
     </header>
     <br><br>
 
-    {% if isSave %}
-        <script>
-            Swal.fire(
-            'Gurdado',
-            'El plato de guardo correctamente',
-            'success'
-            )
-        </script>
-    {% endif %}
     <main class="mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-5">
-                    <img src="../static/img/vegetales.webp" alt="Vegetales" class="img-fluid w-100">
-                </div>
-                <div class="col-12 col-md-7">
-                    <h2>Registro de platos</h2>
-                    <form method="POST">
-                        {{ formulario }}
-                        {% csrf_token %}
-                        <button type="submit" class="btn btn-outline-success w-100">Enviar</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <section>
         <div class="container">
             <div class="row row-cols-1 row-cols-md-4">
                 {% for plato in platos %}
 
-                    <p>{{ plato.nombre }}</p>
+                <div class="card m-2" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ plato.nombre }}</h5>
+                      <p class="card-text">{{ plato.precio }}</p>
+                      <a href="#" class="btn btn-warning">Editar</a>
+                    </div>
+                  </div>
 
                 {% endfor %}
             </div>
         </div>
-    </section>
+    </main>
 
     <footer class="container-fluid mt-5 g-0">
         {% include './shared/footer.html' %}

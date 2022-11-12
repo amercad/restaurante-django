@@ -12,13 +12,16 @@ def Home(request):
 
 def Plato(request):
 
+    platosConsultado = Platos.objects.all()
+
     # Esta vista va a utilizar un formulario de django
     formulario = FormularioPlatos()
 
     # Creamos un diccionario para enviar el formulario al HTML
     data = {
         'formulario': formulario,
-        'isSave': False
+        'isSave': False,
+        'platos': platosConsultado
     }
 
     if request.method=="POST":
@@ -44,6 +47,14 @@ def Plato(request):
 
 
     return render(request, 'menuPlatos.html', data)
+
+def ListaPalto(request):
+    platosConsultado = Platos.objects.all()
+    data = {
+        'platos': platosConsultado
+    }
+
+    return render(request, 'listaPlatos.html', data)
 
 def Empleado(request):
     formulario = FormularioEmpleados()
