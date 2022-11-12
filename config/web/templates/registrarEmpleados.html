@@ -22,6 +22,15 @@
         {% include './shared/menu.html' %}
     </header>
     <br><br>
+    {% if isSave %}
+        <script>
+            Swal.fire(
+            'Gurdado',
+            'El plato de guardo correctamente',
+            'success'
+            )
+        </script>
+    {% endif %}
     <main class="mt-5">
         <div class="container">
             <div class="row">

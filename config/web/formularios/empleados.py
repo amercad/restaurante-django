@@ -33,7 +33,7 @@ class FormularioEmpleados(forms.Form):
         max_length=20,
         widget=forms.NumberInput(attrs={'class': 'form-control mb-3'})
     )
-    contacto = forms.ChoiceField(
+    contacto = forms.CharField(
         required=False,
         widget=forms.TextInput(attrs={'class': 'form-control mb-3'}),
     )

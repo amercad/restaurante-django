@@ -48,27 +48,28 @@ def Plato(request):
 def Empleado(request):
     formulario = FormularioEmpleados()
     data = {
-        'formulario': formulario
+        'formulario': formulario,
+        'isSave': False
     }
 
     if request.method=="POST":
         datosFormularioEmpleado=FormularioEmpleados(request.POST)
         if datosFormularioEmpleado.is_valid():
-            print(datosFormularioEmpleado)
             datosLimpios = datosFormularioEmpleado.cleaned_data
-            # empleadoNuevo = Empleados(
-            #     nombre = datosLimpios["nombre"],
-            #     apellidos = datosLimpios["apellidos"],
-            #     fotografia = datosLimpios["fotografia"],
-            #     cargo = datosLimpios["cargo"],
-            #     salario = datosLimpios["salario"],
-            #     contacto = datosLimpios["contacto"]
-            # )
+            empleadoNuevo = Empleados(
+                nombre = datosLimpios["nombre"],
+                apellidos = datosLimpios["apellidos"],
+                fotografia = datosLimpios["fotografia"],
+                cargo = datosLimpios["cargo"],
+                salario = datosLimpios["salario"],
+                contacto = datosLimpios["contacto"]
+            )
 
-            # try:
-            #     empleadoNuevo.save()
-            #     print('Empleado guardados')
-            # except Exception as error:
-            #     print('Upss', error)
+            try:
+                empleadoNuevo.save()
+                data['isSave'] = True
+                print('Empleado guardados')
+            except Exception as error:
+                print('Upss', error)
 
     return render(request, 'registrarEmpleados.html', data)
