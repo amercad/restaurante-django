@@ -17,11 +17,13 @@ def Plato(request):
 
     # Creamos un diccionario para enviar el formulario al HTML
     data = {
-        'formulario': formulario
+        'formulario': formulario,
+        'isSave': False
     }
 
     if request.method=="POST":
         datosFormulario=FormularioPlatos(request.POST)
+        print(datosFormulario)
         if datosFormulario.is_valid():
             datosLimpios = datosFormulario.cleaned_data
             print(datosLimpios)
@@ -35,6 +37,7 @@ def Plato(request):
 
             try:
                 platoNuevo.save()
+                data['isSave'] = True
                 print('Platos guardados')
             except Exception as error:
                 print('Upss', error)
@@ -51,8 +54,8 @@ def Empleado(request):
     if request.method=="POST":
         datosFormularioEmpleado=FormularioEmpleados(request.POST)
         if datosFormularioEmpleado.is_valid():
+            print(datosFormularioEmpleado)
             datosLimpios = datosFormularioEmpleado.cleaned_data
-            print(datosLimpios)
             # empleadoNuevo = Empleados(
             #     nombre = datosLimpios["nombre"],
             #     apellidos = datosLimpios["apellidos"],
