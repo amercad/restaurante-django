@@ -31,6 +31,30 @@
             )
         </script>
     {% endif %}
+
+    <div class="hero"></div>
+
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <h2 class="wow animate__animated animate__fadeInDown animate__slow zoom mb-3">¡Bienvenidos a el herbario!</h2>
+                <p class="wow animate__animated animate__fadeInDown animate__slow zoom">Queremos utilizar este espacio para enseñarle a nuestros clientes el restaurante y el menú que manejamos. La comida china en Bucaramanga es muy variada y sabemos que hay muchos platos de comida china que son desconocidos para muchos de nuestros clientes. A lo mejor se han preguntado qué son pero no han obtenido una buena respuesta. Esperamos que con la visita a esta página conozcan más acerca de nuestra culinaria y disfruten de toda su variedad.</p>
+            </div>
+            <div class="col-12 col-md-6">
+                <h2 class="wow animate__animated animate__fadeInDown animate__slow zoom">Talento Herbario</h2>
+
+                <p class="wow animate__animated animate__fadeInDown animate__slow zoom">Un empleado debe ser proactivo y buscar soluciones luego de hacer las preguntas correctas.
+                    Además, el empleado idóneo no sólo se adapta al trabajo establecido, sino que también busca formas de mejorar en lo que hace, e incluso mejorar los procesos.</p>
+
+                <p class="wow animate__animated animate__fadeInDown animate__slow zoom">A veces, es mejor contratar a una persona sin mucha experiencia, pero que tenga mucho entusiasmo y curiosidad de aprender, a contratar una persona que sepa todo lo que necesite, pero sea arrogante y egocéntrica.</p>
+
+                <p class="wow animate__animated animate__fadeInDown animate__slow zoom">¡El último paso es escoger al empleado más prometedor!
+                    Si realizaste un período de prueba, es importante consultar la opinión de los trabajadores que ya forman parte de la brigada de trabajo.
+                    Después de todo, la persona que contrates no trabajará bajo tu supervisión directa.</p>
+            </div>
+        </div>
+    </section>
+
     <main class="mt-5">
         <div class="container">
             <div class="row">
@@ -38,7 +62,7 @@
                     <img src="../static/img/empleados.webp" alt="Vegetales" class="img-fluid w-100">
                 </div>
                 <div class="col-12 col-md-7">
-                    <h2>Registro de platos</h2>
+                    <h2>Registro de empleados</h2>
                     <form method="POST">
                         {{ formulario }}
                         {% csrf_token %}

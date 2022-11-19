@@ -50,11 +50,31 @@ def Plato(request):
 
 def ListaPalto(request):
     platosConsultado = Platos.objects.all()
+
     data = {
         'platos': platosConsultado
     }
 
     return render(request, 'listaPlatos.html', data)
+
+def ListaEmpleado(request):
+    empleadoConsultado = Empleados.objects.all()
+    for empleado in empleadoConsultado:
+        if empleado.cargo == 1:
+            empleado.cargo = 'Administrador'
+        elif empleado.cargo == 2:
+            empleado.cargo = 'Ayudante'
+        elif empleado.cargo == 3:
+            empleado.cargo = 'Cheff'
+        elif empleado.cargo == 4:
+            empleado.cargo = 'Mesero'
+        else:
+            empleado.cargo = 'Sin cargo'
+    data = {
+        'empleados': empleadoConsultado
+    }
+
+    return render(request, 'listaEmpleados.html', data)
 
 def Empleado(request):
     formulario = FormularioEmpleados()
